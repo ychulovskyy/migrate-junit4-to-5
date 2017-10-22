@@ -1,0 +1,14 @@
+.idea/
+.settings/
+.m2/
+build/
+target/
+*.bak
+*.iml
+*.log
+*.orig
+*~
+.classpath
+.project
+atlassian-ide-plugin.xml
+.surefire*
