@@ -1,19 +1,19 @@
 package git.ychulovskyy.examples.junit;
 
 import git.ychulovskyy.examples.junit.tools.SlowTests;
-import groovy.lang.Category;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Category(SlowTests.class)
+@Tag(SlowTests.SLOW)
 @ContextConfiguration(classes = MyContext.class)
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @TestPropertySource("classpath:application.properties")
 public class SpringJUnitRunnerTest {
 
@@ -22,6 +22,6 @@ public class SpringJUnitRunnerTest {
 
     @Test
     public void testCalculation() {
-        assertEquals(2, calculationService.add(1,1));
+        assertEquals(2, calculationService.add(1, 1));
     }
 }

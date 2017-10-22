@@ -1,18 +1,13 @@
 package git.ychulovskyy.examples.junit;
 
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import git.ychulovskyy.examples.junit.tools.Scenario;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class MethodOrderTest {
+public class MethodOrderTest implements Scenario {
 
-    @Test
     public void step10_download_artifacts() {
 
     }
 
-    @Test
     public void step20_transform_artifacts() {
 
     }

@@ -3,7 +3,9 @@
          xsi:schemaLocation="http://codenarc.org/ruleset/1.0 http://codenarc.org/ruleset-schema.xsd"
          xsi:noNamespaceSchemaLocation="http://codenarc.org/ruleset-schema.xsd">
 
+    <!-- Uncomment when https://github.com/CodeNarc/CodeNarc/issues/244 has been resolved
     <ruleset-ref path='rulesets/junit.xml'>
         <exclude name="JUnitStyleAssertions "/>
     </ruleset-ref>
+    -->
 </ruleset>

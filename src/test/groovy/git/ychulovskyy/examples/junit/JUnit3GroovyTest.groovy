@@ -1,27 +1,27 @@
 package git.ychulovskyy.examples.junit
 
-import org.junit.Before
-import org.junit.Test
+import git.ychulovskyy.examples.junit.tools.GroovyAssertions
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
 
-import static org.hamcrest.core.IsEqual.equalTo
-import static org.junit.Assume.assumeThat
+import static org.junit.jupiter.api.Assumptions.assumeTrue
 
-class JUnit3GroovyTest extends GroovyTestCase {
+class JUnit3GroovyTest extends GroovyAssertions {
 
-    @Before
+    @BeforeEach
     void setup() {
         // do something here
     }
 
     @Test
     void dummyTest() {
-        assumeThat '' , equalTo('')
+        assumeTrue '' == ''
         assert 1 == 1
     }
 
     @Test
     void testExceptionMessage() {
-        def message = shouldFail { throwException() }
+        def message = shouldFail { throwException() }.message
 
         assert message == 'exception message'
     }
