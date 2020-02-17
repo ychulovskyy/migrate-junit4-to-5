@@ -27,7 +27,7 @@
             <!-- to resolve java.lang.ClassCastException: net.sf.saxon.value.ObjectValue cannot be cast to net.sf.saxon.om.NodeInfo
                 https://saxonica.plan.io/issues/3241 -->
             <!-- Doesn't support xslt 1.0 -->
-            <version>9.8.0-5</version>
+            <version>9.9.1-6</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
